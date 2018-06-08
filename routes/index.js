@@ -53,7 +53,7 @@ router.post('/', function(req, res, next){
     else{
         const inputString = stringModel.find({string: input}, function (err, result){
             if (result.length == 0) {
-                let mymodel = new Person({string: input, length: input.length})
+                let mymodel = new stringModel({string: input, length: input.length})
                 mymodel.save(function (err){
                     if (err) console.log('Error Saving')
 
